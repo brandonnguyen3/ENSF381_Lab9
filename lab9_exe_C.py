@@ -13,7 +13,7 @@ def fetch_product_data(url):
 def list_all_products(products):
     print("All Products:")
     for product in products:
-        print(f" - {product['title']}")
+        print(f" - {product['title']}") # Pretty print with 4 indents.
 
 def search_product(products, name):
     for product in products:
@@ -51,17 +51,17 @@ def main():
             choice = input(">")
             
             if choice == '1':
-                list_all_products(products)
+                list_all_products(products) # Call function to list all products
             elif choice == '2':
                 product_name = input("Enter the product name: ")
-                search_product(products, product_name)
+                search_product(products, product_name) # Call function to search for a product
             elif choice == '3':
-                break
+                break # Exit the loop if user chooses to exit
             else:
-                print("Invalid choice. Please try again.")
+                print("Invalid choice. Please try again.") # Print message for invalid input
 
     else:
-        print("Failed to fetch product data.")
+        print("Failed to fetch product data.") # Print message if product data fetching fails
 
 if __name__ == "__main__":
     main()
